@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { FC } from "react"
 
 import { PaletteMode, useTheme } from "@mui/material"
@@ -29,6 +31,7 @@ const HeaderComponent: FC<Props> = ({mode, onChange}) => {
             }}
             position="static">
           <Toolbar>
+            <Link href='/' passHref>
             <IconButton
               size="large"
               edge="start"
@@ -38,6 +41,7 @@ const HeaderComponent: FC<Props> = ({mode, onChange}) => {
             >
               <MenuIcon />
             </IconButton>
+            </Link>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Avatar Legends
             </Typography>
